@@ -17,9 +17,10 @@ def rebuild():
     )
     template = env.get_template('template.html')
     data = load_json('downloads/data.json')
-    group_1, group_2 = more_itertools.distribute(2, data)
+
+    data_length = len(data)
     rendered_page = template.render(
-        book_groups=[group_1, group_2],
+        book_groups=more_itertools.chunked(data, data_length // 2 + 1 if data_length % 2 else data_length // 2),
     )
 
     with open('index.html', 'w', encoding="utf8") as file:
