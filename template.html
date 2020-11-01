@@ -12,6 +12,10 @@
   <title>Books</title>
 </head>
 <body>
+<div class="container">
+  <div class="row">
+    {% for books in book_groups %}
+      <div class="col">
 {% for book in books %}
   <div class="card mb-3" style="max-width: 540px;">
     <div class="row no-gutters">
@@ -27,7 +31,12 @@
       </div>
     </div>
   </div>
+
 {% endfor %}
+        </div>
+    {% endfor %}
+  </div>
+</div>
 
 <!-- Optional JavaScript; choose one of the two! -->
 
