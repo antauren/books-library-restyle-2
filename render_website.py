@@ -37,15 +37,15 @@ def rebuild():
             pages=[
                 {
                     'num': page_num,
-                    'url': os.path.join('/', pages_dir, 'index{}.html'.format(page_num))
+                    'url': os.path.join(pages_dir, 'index{}.html'.format(page_num))
                 }
                 for page_num in range(1, pages_count + 1)
             ],
             current_page=num,
             next=num != pages_count,
             previous=num != 1,
-            next_url=os.path.join('/', pages_dir, 'index{}.html'.format(num + 1)),
-            previous_url=os.path.join('/', pages_dir, 'index{}.html'.format(num - 1))
+            next_url=os.path.join(pages_dir, 'index{}.html'.format(num + 1)),
+            previous_url=os.path.join(pages_dir, 'index{}.html'.format(num - 1))
         )
 
         page_path = os.path.join(pages_dir, 'index{}.html'.format(num))
