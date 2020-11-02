@@ -57,7 +57,7 @@ def rebuild():
             file.write(rendered_page)
 
         if num == 1:
-            page_path = 'index.html'
+            page_path = os.path.join(pages_dir, 'index.html')
             with open(page_path, 'w', encoding="utf8") as file:
                 file.write(rendered_page)
 
