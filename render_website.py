@@ -33,11 +33,10 @@ def rebuild():
 
     for num, page_data in enumerate(chunked_data, start=1):
         page_data_list = list(page_data)
-        data_length = len(page_data_list)
 
         rendered_page = template.render(
             book_groups=more_itertools.chunked(page_data_list,
-                                               data_length // 2 + 1 if data_length % 2 else data_length // 2),
+                                               math.ceil(len(page_data_list) / 2)),
             pages=[
                 {
                     'num': page_num,
