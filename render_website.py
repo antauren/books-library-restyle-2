@@ -19,7 +19,7 @@ def rebuild():
         autoescape=select_autoescape(['html'])
     )
     template = env.get_template('template.html')
-    data = load_json('data/data.json')
+    data = load_json(os.path.join('data', 'data.json'))
     for book in data:
         book['img_src'] = os.path.join('..', book['img_src'])
         book['book_path'] = os.path.join('..', book['book_path'])
@@ -66,7 +66,7 @@ def rebuild():
 
 rebuild()
 server = Server()
-server.serve(default_filename='pages/index1.html')
+server.serve(default_filename=os.path.join('pages', 'index1.html'))
 
 server.watch('template.html', rebuild)
 
