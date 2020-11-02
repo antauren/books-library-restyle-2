@@ -19,9 +19,6 @@ def rebuild():
     )
     template = env.get_template('template.html')
     data = load_json('data/data.json')
-    for book in data:
-        book['img_src'] = os.path.join('/', book['img_src'])
-        book['book_path'] = os.path.join('/', book['book_path'])
 
     pages_dir = 'pages'
     os.makedirs(pages_dir, exist_ok=True)
