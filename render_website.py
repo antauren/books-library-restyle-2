@@ -1,10 +1,11 @@
 import json
-import os
 import math
+import os
+from urllib.parse import urljoin
 
+import more_itertools
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from livereload import Server
-import more_itertools
 
 
 def load_json(path):
@@ -19,6 +20,9 @@ def rebuild():
     )
     template = env.get_template('template.html')
     data = load_json('data/data.json')
+    for book in data:
+        book['img_src'] = os.path.join('..', book['img_src'])
+        book['book_path'] = os.path.join('..', book['book_path'])
 
     pages_dir = 'pages'
     os.makedirs(pages_dir, exist_ok=True)
@@ -37,15 +41,15 @@ def rebuild():
             pages=[
                 {
                     'num': page_num,
-                    'url': os.path.join(pages_dir, 'index{}.html'.format(page_num))
+                    'url': os.path.join('..', pages_dir, 'index{}.html'.format(page_num))
                 }
                 for page_num in range(1, pages_count + 1)
             ],
             current_page=num,
             next=num != pages_count,
             previous=num != 1,
-            next_url=os.path.join(pages_dir, 'index{}.html'.format(num + 1)),
-            previous_url=os.path.join(pages_dir, 'index{}.html'.format(num - 1))
+            next_url=os.path.join('..', pages_dir, 'index{}.html'.format(num + 1)),
+            previous_url=os.path.join('..', pages_dir, 'index{}.html'.format(num - 1))
         )
 
         page_path = os.path.join(pages_dir, 'index{}.html'.format(num))
