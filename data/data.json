@@ -6,8 +6,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/nopic.gif",
-        "book_path": "downloads/books/Рычало_id11648.txt"
+        "img_src": "data/images/nopic.gif",
+        "book_path": "data/books/Рычало_id11648.txt"
     },
     {
         "title": "Свет меридиана",
@@ -19,8 +19,8 @@
             "Детская фантастика",
             "Детские приключения"
         ],
-        "img_src": "downloads/images/12144.jpg",
-        "book_path": "downloads/books/Свет меридиана_id12144.txt"
+        "img_src": "data/images/12144.jpg",
+        "book_path": "data/books/Свет меридиана_id12144.txt"
     },
     {
         "title": "Путешествие на утреннюю звезду (с иллюстрациями)",
@@ -31,8 +31,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/nopic.gif",
-        "book_path": "downloads/books/Путешествие на утреннюю звезду (с иллюстрациями)_id11522.txt"
+        "img_src": "data/images/nopic.gif",
+        "book_path": "data/books/Путешествие на утреннюю звезду (с иллюстрациями)_id11522.txt"
     },
     {
         "title": "Волшебная галоша",
@@ -43,8 +43,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/12689.jpg",
-        "book_path": "downloads/books/Волшебная галоша_id12689.txt"
+        "img_src": "data/images/12689.jpg",
+        "book_path": "data/books/Волшебная галоша_id12689.txt"
     },
     {
         "title": "Опасное наследство",
@@ -56,8 +56,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/10973.jpg",
-        "book_path": "downloads/books/Опасное наследство_id10973.txt"
+        "img_src": "data/images/10973.jpg",
+        "book_path": "data/books/Опасное наследство_id10973.txt"
     },
     {
         "title": "Пятно кровавой луны",
@@ -71,8 +71,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/11158.jpg",
-        "book_path": "downloads/books/Пятно кровавой луны_id11158.txt"
+        "img_src": "data/images/11158.jpg",
+        "book_path": "data/books/Пятно кровавой луны_id11158.txt"
     },
     {
         "title": "Высшая мифология",
@@ -86,8 +86,8 @@
             "Детская фантастика",
             "Юмористическая фантастика"
         ],
-        "img_src": "downloads/images/12792.jpg",
-        "book_path": "downloads/books/Высшая мифология_id12792.txt"
+        "img_src": "data/images/12792.jpg",
+        "book_path": "data/books/Высшая мифология_id12792.txt"
     },
     {
         "title": "Спаситель океана, или Повесть о странствующем слесаре",
@@ -100,8 +100,8 @@
             "Детская фантастика",
             "Фэнтези"
         ],
-        "img_src": "downloads/images/12058.jpg",
-        "book_path": "downloads/books/Спаситель океана, или Повесть о странствующем слесаре_id12058.txt"
+        "img_src": "data/images/12058.jpg",
+        "book_path": "data/books/Спаситель океана, или Повесть о странствующем слесаре_id12058.txt"
     },
     {
         "title": "Общая теория Доминант",
@@ -122,8 +122,8 @@
             "Детская фантастика",
             "Научная фантастика"
         ],
-        "img_src": "downloads/images/10923.jpg",
-        "book_path": "downloads/books/Общая теория Доминант_id10923.txt"
+        "img_src": "data/images/10923.jpg",
+        "book_path": "data/books/Общая теория Доминант_id10923.txt"
     },
     {
         "title": "Звездный зверь ( Звездное чудовище)",
@@ -137,8 +137,8 @@
             "Детская фантастика",
             "Научная фантастика"
         ],
-        "img_src": "downloads/images/13038.jpg",
-        "book_path": "downloads/books/Звездный зверь ( Звездное чудовище)_id13038.txt"
+        "img_src": "data/images/13038.jpg",
+        "book_path": "data/books/Звездный зверь ( Звездное чудовище)_id13038.txt"
     },
     {
         "title": "Тайна замка Кары",
@@ -149,8 +149,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/12275.jpg",
-        "book_path": "downloads/books/Тайна замка Кары_id12275.txt"
+        "img_src": "data/images/12275.jpg",
+        "book_path": "data/books/Тайна замка Кары_id12275.txt"
     },
     {
         "title": "Продавец приключений",
@@ -164,8 +164,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/11471.jpg",
-        "book_path": "downloads/books/Продавец приключений_id11471.txt"
+        "img_src": "data/images/11471.jpg",
+        "book_path": "data/books/Продавец приключений_id11471.txt"
     },
     {
         "title": "Взгляд из сердца",
@@ -178,8 +178,8 @@
             "Прочая детская литература",
             "Эзотерика"
         ],
-        "img_src": "downloads/images/nopic.gif",
-        "book_path": "downloads/books/Взгляд из сердца_id12795.txt"
+        "img_src": "data/images/nopic.gif",
+        "book_path": "data/books/Взгляд из сердца_id12795.txt"
     },
     {
         "title": "Огненное озеро",
@@ -188,8 +188,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/10953.jpg",
-        "book_path": "downloads/books/Огненное озеро_id10953.txt"
+        "img_src": "data/images/10953.jpg",
+        "book_path": "data/books/Огненное озеро_id10953.txt"
     },
     {
         "title": "Те, кто рядом",
@@ -202,8 +202,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/nopic.gif",
-        "book_path": "downloads/books/Те, кто рядом_id12307.txt"
+        "img_src": "data/images/nopic.gif",
+        "book_path": "data/books/Те, кто рядом_id12307.txt"
     },
     {
         "title": "Звездный Коот",
@@ -212,8 +212,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/nopic.gif",
-        "book_path": "downloads/books/Звездный Коот_id13037.txt"
+        "img_src": "data/images/nopic.gif",
+        "book_path": "data/books/Звездный Коот_id13037.txt"
     },
     {
         "title": "Веревочник",
@@ -226,8 +226,8 @@
             "Сказки",
             "Фэнтези"
         ],
-        "img_src": "downloads/images/12612.jpg",
-        "book_path": "downloads/books/Веревочник_id12612.txt"
+        "img_src": "data/images/12612.jpg",
+        "book_path": "data/books/Веревочник_id12612.txt"
     },
     {
         "title": "Прикладная мифология",
@@ -241,8 +241,8 @@
             "Детская фантастика",
             "Юмористическая фантастика"
         ],
-        "img_src": "downloads/images/11313.jpg",
-        "book_path": "downloads/books/Прикладная мифология_id11313.txt"
+        "img_src": "data/images/11313.jpg",
+        "book_path": "data/books/Прикладная мифология_id11313.txt"
     },
     {
         "title": "Зарубежная мифология",
@@ -254,8 +254,8 @@
             "Детская фантастика",
             "Юмористическая фантастика"
         ],
-        "img_src": "downloads/images/12910.jpg",
-        "book_path": "downloads/books/Зарубежная мифология_id12910.txt"
+        "img_src": "data/images/12910.jpg",
+        "book_path": "data/books/Зарубежная мифология_id12910.txt"
     },
     {
         "title": "Уникум",
@@ -264,8 +264,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/12495.jpg",
-        "book_path": "downloads/books/Уникум_id12495.txt"
+        "img_src": "data/images/12495.jpg",
+        "book_path": "data/books/Уникум_id12495.txt"
     },
     {
         "title": "Звёздные приключения Нуми и Ники",
@@ -274,8 +274,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/nopic.gif",
-        "book_path": "downloads/books/Звёздные приключения Нуми и Ники_id13044.txt"
+        "img_src": "data/images/nopic.gif",
+        "book_path": "data/books/Звёздные приключения Нуми и Ники_id13044.txt"
     },
     {
         "title": "Звездные приключения Нуми и Ники.",
@@ -284,8 +284,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/nopic.gif",
-        "book_path": "downloads/books/Звездные приключения Нуми и Ники._id13036.txt"
+        "img_src": "data/images/nopic.gif",
+        "book_path": "data/books/Звездные приключения Нуми и Ники._id13036.txt"
     },
     {
         "title": "Похищение продавца приключений",
@@ -294,8 +294,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/11286.jpg",
-        "book_path": "downloads/books/Похищение продавца приключений_id11286.txt"
+        "img_src": "data/images/11286.jpg",
+        "book_path": "data/books/Похищение продавца приключений_id11286.txt"
     },
     {
         "title": "Рог Юона",
@@ -304,8 +304,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/nopic.gif",
-        "book_path": "downloads/books/Рог Юона_id11606.txt"
+        "img_src": "data/images/nopic.gif",
+        "book_path": "data/books/Рог Юона_id11606.txt"
     },
     {
         "title": "Желтый цветок",
@@ -314,8 +314,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/nopic.gif",
-        "book_path": "downloads/books/Желтый цветок_id12947.txt"
+        "img_src": "data/images/nopic.gif",
+        "book_path": "data/books/Желтый цветок_id12947.txt"
     },
     {
         "title": "Путешествие на утреннюю звезду",
@@ -324,8 +324,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/nopic.gif",
-        "book_path": "downloads/books/Путешествие на утреннюю звезду_id11523.txt"
+        "img_src": "data/images/nopic.gif",
+        "book_path": "data/books/Путешествие на утреннюю звезду_id11523.txt"
     },
     {
         "title": "Звездные приключения Нуми и Ники. Книга 2",
@@ -336,8 +336,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/nopic.gif",
-        "book_path": "downloads/books/Звездные приключения Нуми и Ники. Книга 2_id13035.txt"
+        "img_src": "data/images/nopic.gif",
+        "book_path": "data/books/Звездные приключения Нуми и Ники. Книга 2_id13035.txt"
     },
     {
         "title": "Отрава",
@@ -353,8 +353,8 @@
             "Детская фантастика",
             "Фэнтези"
         ],
-        "img_src": "downloads/images/11036.jpg",
-        "book_path": "downloads/books/Отрава_id11036.txt"
+        "img_src": "data/images/11036.jpg",
+        "book_path": "data/books/Отрава_id11036.txt"
     },
     {
         "title": "Остров на дне океана",
@@ -363,8 +363,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/11019.jpg",
-        "book_path": "downloads/books/Остров на дне океана_id11019.txt"
+        "img_src": "data/images/11019.jpg",
+        "book_path": "data/books/Остров на дне океана_id11019.txt"
     },
     {
         "title": "Секретные материалы",
@@ -376,8 +376,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/11720.jpg",
-        "book_path": "downloads/books/Секретные материалы_id11720.txt"
+        "img_src": "data/images/11720.jpg",
+        "book_path": "data/books/Секретные материалы_id11720.txt"
     },
     {
         "title": "Волшебный камень Бризингамена",
@@ -389,8 +389,8 @@
             "Детская фантастика",
             "Детские приключения"
         ],
-        "img_src": "downloads/images/12718.jpg",
-        "book_path": "downloads/books/Волшебный камень Бризингамена_id12718.txt"
+        "img_src": "data/images/12718.jpg",
+        "book_path": "data/books/Волшебный камень Бризингамена_id12718.txt"
     },
     {
         "title": "Проект АЦ",
@@ -402,8 +402,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/nopic.gif",
-        "book_path": "downloads/books/Проект АЦ_id11473.txt"
+        "img_src": "data/images/nopic.gif",
+        "book_path": "data/books/Проект АЦ_id11473.txt"
     },
     {
         "title": "Очень таинственный остров",
@@ -414,8 +414,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/10930.jpg",
-        "book_path": "downloads/books/Очень таинственный остров_id10930.txt"
+        "img_src": "data/images/10930.jpg",
+        "book_path": "data/books/Очень таинственный остров_id10930.txt"
     },
     {
         "title": "Шум дождя",
@@ -430,8 +430,8 @@
             "Сказки",
             "Философия"
         ],
-        "img_src": "downloads/images/nopic.gif",
-        "book_path": "downloads/books/Шум дождя_id11798.txt"
+        "img_src": "data/images/nopic.gif",
+        "book_path": "data/books/Шум дождя_id11798.txt"
     },
     {
         "title": "Высокое волшебство",
@@ -443,8 +443,8 @@
             "Детская фантастика",
             "Фэнтези"
         ],
-        "img_src": "downloads/images/12790.jpg",
-        "book_path": "downloads/books/Высокое волшебство_id12790.txt"
+        "img_src": "data/images/12790.jpg",
+        "book_path": "data/books/Высокое волшебство_id12790.txt"
     },
     {
         "title": "Зеленая магия",
@@ -453,8 +453,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/12919.jpg",
-        "book_path": "downloads/books/Зеленая магия_id12919.txt"
+        "img_src": "data/images/12919.jpg",
+        "book_path": "data/books/Зеленая магия_id12919.txt"
     },
     {
         "title": "Жестокая Императрица",
@@ -463,8 +463,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/12955.jpg",
-        "book_path": "downloads/books/Жестокая Императрица_id12955.txt"
+        "img_src": "data/images/12955.jpg",
+        "book_path": "data/books/Жестокая Императрица_id12955.txt"
     },
     {
         "title": "Пятеро в звездолёте",
@@ -478,8 +478,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/11155.jpg",
-        "book_path": "downloads/books/Пятеро в звездолёте_id11155.txt"
+        "img_src": "data/images/11155.jpg",
+        "book_path": "data/books/Пятеро в звездолёте_id11155.txt"
     },
     {
         "title": "С нами... КТО?!",
@@ -492,8 +492,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/nopic.gif",
-        "book_path": "downloads/books/С нами... КТО!_id11657.txt"
+        "img_src": "data/images/nopic.gif",
+        "book_path": "data/books/С нами... КТО!_id11657.txt"
     },
     {
         "title": "Семь дней чудес",
@@ -505,8 +505,8 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/11726.jpg",
-        "book_path": "downloads/books/Семь дней чудес_id11726.txt"
+        "img_src": "data/images/11726.jpg",
+        "book_path": "data/books/Семь дней чудес_id11726.txt"
     },
     {
         "title": "Звездные приключения Нуми и Ники. Книга 1",
@@ -518,7 +518,7 @@
         "genres": [
             "Детская фантастика"
         ],
-        "img_src": "downloads/images/nopic.gif",
-        "book_path": "downloads/books/Звездные приключения Нуми и Ники. Книга 1_id13034.txt"
+        "img_src": "data/images/nopic.gif",
+        "book_path": "data/books/Звездные приключения Нуми и Ники. Книга 1_id13034.txt"
     }
 ]
