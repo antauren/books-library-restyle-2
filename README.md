@@ -2,7 +2,7 @@
 <img src="screenshots/example.gif"/>  
 
 Скрипт запускает сайт с книгами.  
-Книги были скачанны при помощи [парсера книг с сайта tululu.org](https://github.com/antauren/books-library-restyle/).
+Книги были скачаны при помощи [парсера книг с сайта tululu.org](https://github.com/antauren/books-library-restyle/).
 
 [Пример работы сайта](https://antauren.github.io/books-library-restyle-2/pages/)   
 
