@@ -13,6 +13,21 @@
 </head>
 <body>
 <div class="container">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item {% if not previous %}disabled{% endif %}">
+        <a class="page-link" href="{{ previous_url | urlencode }}">Назад</a>
+      </li>
+      {% for page in pages %}
+        <li class="page-item {% if current_page == page.num %}active{% endif %}">
+          <a class="page-link" href="{{ page.url | urlencode }}">{{ page.num }}</a>
+        </li>
+      {% endfor %}
+      <li class="page-item {% if not next %}disabled{% endif %}">
+        <a class="page-link" href="{{ next_url | urlencode }}">Вперёд</a>
+      </li>
+    </ul>
+  </nav>
   <div class="row">
     {% for books in book_groups %}
       <div class="col">
