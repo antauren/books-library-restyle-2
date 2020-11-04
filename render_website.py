@@ -8,18 +8,15 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from livereload import Server
 
 
-def load_json(path):
-    with open(path) as fd:
-        return json.load(fd)
-
-
 def rebuild():
     env = Environment(
         loader=FileSystemLoader('.'),
         autoescape=select_autoescape(['html'])
     )
     template = env.get_template('template.html')
-    data = load_json(os.path.join('data', 'data.json'))
+    json_file = os.path.join('data', 'data.json')
+    with open(json_file) as fd:
+        data = json.load(fd)
     for book in data:
         book['img_src'] = os.path.join('..', book['img_src'])
         book['book_path'] = os.path.join('..', book['book_path'])
