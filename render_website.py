@@ -49,7 +49,7 @@ def rebuild():
         rendered_page = template.render(book_groups=book_groups,
                                         pages=pages,
                                         current_page=num,
-                                        next=next_,
+                                        next_=next_,
                                         previous=previous,
                                         next_url=next_url,
                                         previous_url=previous_url

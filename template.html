@@ -24,7 +24,7 @@
             <a class="page-link" href="{{ page.url | urlencode }}">{{ page.num }}</a>
           </li>
         {% endfor %}
-        <li class="page-item {% if not next %}disabled{% endif %}">
+        <li class="page-item {% if not next_ %}disabled{% endif %}">
           <a class="page-link" href="{{ next_url | urlencode }}">Вперёд</a>
         </li>
       </ul>
