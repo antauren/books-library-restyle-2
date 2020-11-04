@@ -30,23 +30,30 @@ def rebuild():
 
     for num, page_data in enumerate(chunked_data, start=1):
         page_data_list = list(page_data)
+        book_groups = more_itertools.chunked(page_data_list,
+                                             math.ceil(len(page_data_list) / 2)
+                                             )
+        pages = [
+            {
+                'num': page_num,
+                'url': os.path.join('..', pages_dir, 'index{}.html'.format(page_num))
+            }
+            for page_num in range(1, pages_count + 1)
+        ]
+        next_url = os.path.join('..', pages_dir, 'index{}.html'.format(num + 1))
+        previous_url = os.path.join('..', pages_dir, 'index{}.html'.format(num - 1))
 
-        rendered_page = template.render(
-            book_groups=more_itertools.chunked(page_data_list,
-                                               math.ceil(len(page_data_list) / 2)),
-            pages=[
-                {
-                    'num': page_num,
-                    'url': os.path.join('..', pages_dir, 'index{}.html'.format(page_num))
-                }
-                for page_num in range(1, pages_count + 1)
-            ],
-            current_page=num,
-            next=num != pages_count,
-            previous=num != 1,
-            next_url=os.path.join('..', pages_dir, 'index{}.html'.format(num + 1)),
-            previous_url=os.path.join('..', pages_dir, 'index{}.html'.format(num - 1))
-        )
+        next_ = num != pages_count
+        previous = num != 1
+
+        rendered_page = template.render(book_groups=book_groups,
+                                        pages=pages,
+                                        current_page=num,
+                                        next=next_,
+                                        previous=previous,
+                                        next_url=next_url,
+                                        previous_url=previous_url
+                                        )
 
         page_path = os.path.join(pages_dir, 'index{}.html'.format(num))
         with open(page_path, 'w', encoding="utf8") as file:
