@@ -8,6 +8,10 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from livereload import Server
 
 
+def get_index_filename(num):
+    return 'index{}.html'.format(num if num != 1 else '')
+
+
 def rebuild():
     env = Environment(
         loader=FileSystemLoader('.'),
@@ -36,12 +40,12 @@ def rebuild():
         pages = [
             {
                 'num': page_num,
-                'url': os.path.join('..', pages_dir, 'index{}.html'.format(page_num))
+                'url': os.path.join('..', pages_dir, get_index_filename(page_num))
             }
             for page_num in range(1, pages_count + 1)
         ]
-        next_url = os.path.join('..', pages_dir, 'index{}.html'.format(num + 1))
-        previous_url = os.path.join('..', pages_dir, 'index{}.html'.format(num - 1))
+        next_url = os.path.join('..', pages_dir, get_index_filename(num + 1))
+        previous_url = os.path.join('..', pages_dir, get_index_filename(num - 1))
 
         next_ = num != pages_count
         previous = num != 1
@@ -55,21 +59,16 @@ def rebuild():
                                         previous_url=previous_url
                                         )
 
-        page_path = os.path.join(pages_dir, 'index{}.html'.format(num))
+        page_path = os.path.join(pages_dir, get_index_filename(num))
         with open(page_path, 'w', encoding="utf8") as file:
             file.write(rendered_page)
-
-        if num == 1:
-            page_path = os.path.join(pages_dir, 'index.html')
-            with open(page_path, 'w', encoding="utf8") as file:
-                file.write(rendered_page)
 
     print("Site rebuilded")
 
 
 rebuild()
 server = Server()
-server.serve(default_filename=os.path.join('pages', 'index1.html'))
+server.serve(default_filename=os.path.join('pages', 'index.html'))
 
 server.watch('template.html', rebuild)
 
