@@ -1,3 +1,4 @@
+import glob
 import json
 import math
 import os
@@ -30,6 +31,8 @@ def rebuild():
     pages_dir = 'pages'
     os.makedirs(pages_dir, exist_ok=True)
     relative_dir = os.path.join('..', pages_dir)
+    for file_ in glob.glob('pages/*.html'):
+        os.remove(file_)
 
     split_length = 10
     chunked_data = list(more_itertools.chunked(data, split_length))
