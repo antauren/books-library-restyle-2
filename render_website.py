@@ -26,10 +26,7 @@ def load_data(json_file):
 
 
 def rebuild():
-    env = Environment(
-        loader=FileSystemLoader('.'),
-        autoescape=select_autoescape(['html'])
-    )
+    env = Environment(loader=FileSystemLoader('.'), autoescape=select_autoescape(['html']))
     template = env.get_template('template.html')
     json_file = os.path.join('data', 'data.json')
     data = load_data(json_file)
@@ -45,16 +42,9 @@ def rebuild():
     pages_count = math.ceil(len(data) / split_length)
 
     for num, page_data in enumerate(chunked_data, start=1):
-        book_groups = more_itertools.chunked(page_data,
-                                             math.ceil(len(page_data) / 2)
-                                             )
-        pages = [
-            {
-                'num': page_num,
-                'url': get_index_filename(page_num, pages_count, relative_dir)
-            }
-            for page_num in range(1, pages_count + 1)
-        ]
+        book_groups = more_itertools.chunked(page_data, math.ceil(len(page_data) / 2))
+        pages = [{'num': page_num, 'url': get_index_filename(page_num, pages_count, relative_dir)}
+                 for page_num in range(1, pages_count + 1)]
         next_url = get_index_filename(num + 1, pages_count, relative_dir)
         previous_url = get_index_filename(num - 1, pages_count, relative_dir)
 
