@@ -41,7 +41,7 @@ def rebuild():
         os.remove(file_)
 
     split_length = 10
-    chunked_data = list(more_itertools.chunked(data, split_length))
+    chunked_data = more_itertools.chunked(data, split_length)
     pages_count = math.ceil(len(data) / split_length)
 
     for num, page_data in enumerate(chunked_data, start=1):
