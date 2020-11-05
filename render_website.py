@@ -45,9 +45,8 @@ def rebuild():
     pages_count = math.ceil(len(data) / split_length)
 
     for num, page_data in enumerate(chunked_data, start=1):
-        page_data_list = list(page_data)
-        book_groups = more_itertools.chunked(page_data_list,
-                                             math.ceil(len(page_data_list) / 2)
+        book_groups = more_itertools.chunked(page_data,
+                                             math.ceil(len(page_data) / 2)
                                              )
         pages = [
             {
