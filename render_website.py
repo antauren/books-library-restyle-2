@@ -31,7 +31,7 @@ def rebuild():
     pages_dir = 'pages'
     os.makedirs(pages_dir, exist_ok=True)
     relative_dir = os.path.join('..', pages_dir)
-    for file_ in glob.glob('pages/*.html'):
+    for file_ in glob.glob('{}/*.html'.format(pages_dir)):
         os.remove(file_)
 
     split_length = 10
