@@ -8,8 +8,11 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from livereload import Server
 
 
-def get_index_filename(num):
-    return 'index{}.html'.format(num if num != 1 else '')
+def get_index_filename(num, pages_count, pages_dir):
+    if pages_count in {0, pages_count}:
+        return ''
+    index_file = 'index{}.html'.format(num if num != 1 else '')
+    return os.path.join(pages_dir, index_file)
 
 
 def rebuild():
@@ -41,26 +44,23 @@ def rebuild():
         pages = [
             {
                 'num': page_num,
-                'url': os.path.join(relative_dir, get_index_filename(page_num))
+                'url': get_index_filename(page_num, pages_count, relative_dir)
             }
             for page_num in range(1, pages_count + 1)
         ]
-        next_url = os.path.join(relative_dir, get_index_filename(num + 1))
-        previous_url = os.path.join(relative_dir, get_index_filename(num - 1))
-
-        next_ = num != pages_count
-        previous = num != 1
+        next_url = get_index_filename(num + 1, pages_count, relative_dir)
+        previous_url = get_index_filename(num - 1, pages_count, relative_dir)
 
         rendered_page = template.render(book_groups=book_groups,
                                         pages=pages,
                                         current_page=num,
-                                        next_=next_,
-                                        previous=previous,
                                         next_url=next_url,
                                         previous_url=previous_url
                                         )
 
-        page_path = os.path.join(pages_dir, get_index_filename(num))
+        page_path = get_index_filename(num, pages_count, pages_dir)
+        if not page_path:
+            continue
         with open(page_path, 'w', encoding="utf8") as file:
             file.write(rendered_page)
 
