@@ -8,7 +8,7 @@ from livereload import Server
 
 
 def get_index_filename(num, pages_count, pages_dir):
-    if pages_count in {0, pages_count}:
+    if num in {0, pages_count + 1}:
         return ''
     index_file = 'index{}.html'.format(num if num != 1 else '')
     return os.path.join(pages_dir, index_file)
