@@ -60,10 +60,10 @@ def rebuild():
         page_path = get_index_filename(num, pages_count, pages_dir)
         if not page_path:
             continue
-        with open(page_path, 'w', encoding="utf8") as file:
+        with open(page_path, 'w', encoding='utf8') as file:
             file.write(rendered_page)
 
-    print("Site rebuilded")
+    print('Site rebuilded')
 
 
 rebuild()
