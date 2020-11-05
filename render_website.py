@@ -27,6 +27,7 @@ def rebuild():
 
     pages_dir = 'pages'
     os.makedirs(pages_dir, exist_ok=True)
+    relative_dir = os.path.join('..', pages_dir)
 
     split_length = 10
     chunked_data = list(more_itertools.chunked(data, split_length))
@@ -40,12 +41,12 @@ def rebuild():
         pages = [
             {
                 'num': page_num,
-                'url': os.path.join('..', pages_dir, get_index_filename(page_num))
+                'url': os.path.join(relative_dir, get_index_filename(page_num))
             }
             for page_num in range(1, pages_count + 1)
         ]
-        next_url = os.path.join('..', pages_dir, get_index_filename(num + 1))
-        previous_url = os.path.join('..', pages_dir, get_index_filename(num - 1))
+        next_url = os.path.join(relative_dir, get_index_filename(num + 1))
+        previous_url = os.path.join(relative_dir, get_index_filename(num - 1))
 
         next_ = num != pages_count
         previous = num != 1
