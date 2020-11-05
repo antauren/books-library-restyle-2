@@ -1,7 +1,6 @@
 import json
 import math
 import os
-from urllib.parse import urljoin
 
 import more_itertools
 from jinja2 import Environment, FileSystemLoader, select_autoescape
