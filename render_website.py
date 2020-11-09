@@ -15,7 +15,7 @@ def get_index_filename(num, pages_count, pages_dir):
     return os.path.join(pages_dir, index_file)
 
 
-def load_data(json_file):
+def load_book_data(json_file):
     with open(json_file) as fd:
         data = json.load(fd)
     for book in data:
@@ -29,7 +29,7 @@ def rebuild():
     env = Environment(loader=FileSystemLoader('.'), autoescape=select_autoescape(['html']))
     template = env.get_template('template.html')
     json_file = os.path.join('data', 'data.json')
-    data = load_data(json_file)
+    data = load_book_data(json_file)
 
     pages_dir = 'pages'
     os.makedirs(pages_dir, exist_ok=True)
