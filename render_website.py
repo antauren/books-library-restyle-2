@@ -8,9 +8,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from livereload import Server
 
 
-def get_page_path(num, pages_count, pages_dir):
-    if num in {0, pages_count + 1}:
-        return ''
+def get_page_path(num, pages_dir):
     index_file = 'index{}.html'.format(num if num != 1 else '')
     return os.path.join(pages_dir, index_file)
 
@@ -43,10 +41,10 @@ def rebuild():
 
     for num, page_data in enumerate(chunked_data, start=1):
         book_groups = more_itertools.chunked(page_data, math.ceil(len(page_data) / 2))
-        pages = [{'num': page_num, 'url': get_page_path(page_num, pages_count, relative_dir)}
+        pages = [{'num': page_num, 'url': get_page_path(page_num, relative_dir)}
                  for page_num in range(1, pages_count + 1)]
-        next_url = get_page_path(num + 1, pages_count, relative_dir)
-        previous_url = get_page_path(num - 1, pages_count, relative_dir)
+        next_url = get_page_path(num + 1, relative_dir) if is_page_num_correct(num + 1, pages_count) else ''
+        previous_url = get_page_path(num - 1, relative_dir) if is_page_num_correct(num - 1, pages_count) else ''
 
         rendered_page = template.render(book_groups=book_groups,
                                         pages=pages,
@@ -55,13 +53,17 @@ def rebuild():
                                         previous_url=previous_url
                                         )
 
-        page_path = get_page_path(num, pages_count, pages_dir)
-        if not page_path:
+        if not is_page_num_correct(num, pages_count):
             continue
+        page_path = get_page_path(num, pages_dir)
         with open(page_path, 'w', encoding='utf8') as file:
             file.write(rendered_page)
 
     print('Site rebuilded')
+
+
+def is_page_num_correct(num: int, pages_count: int) -> bool:
+    return 0 < num <= pages_count
 
 
 rebuild()
