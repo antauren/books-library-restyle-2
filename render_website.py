@@ -26,8 +26,8 @@ def load_book_data(json_file):
 def rebuild():
     env = Environment(loader=FileSystemLoader('.'), autoescape=select_autoescape(['html']))
     template = env.get_template('template.html')
-    json_file = os.path.join('data', 'data.json')
-    data = load_book_data(json_file)
+    json_filename = os.path.join('data', 'data.json')
+    data = load_book_data(json_filename)
 
     pages_dir = 'pages'
     os.makedirs(pages_dir, exist_ok=True)
