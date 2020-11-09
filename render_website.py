@@ -66,10 +66,11 @@ def is_page_num_correct(num: int, pages_count: int) -> bool:
     return 0 < num <= pages_count
 
 
-rebuild()
-server = Server()
-server.serve(default_filename=os.path.join('pages', 'index.html'))
+if __name__ == '__main__':
+    rebuild()
+    server = Server()
+    server.serve(default_filename=os.path.join('pages', 'index.html'))
 
-server.watch('template.html', rebuild)
+    server.watch('template.html', rebuild)
 
-server.serve(root='.')
+    server.serve(root='.')
