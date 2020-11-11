@@ -13,21 +13,21 @@ def get_page_path(num, pages_dir):
     return os.path.join(pages_dir, index_file)
 
 
-def load_book_data(json_file):
+def load_books(json_file):
     with open(json_file) as fd:
-        data = json.load(fd)
-    for book in data:
+        books = json.load(fd)
+    for book in books:
         book['img_src'] = os.path.join('..', book['img_src'])
         book['book_path'] = os.path.join('..', book['book_path'])
 
-    return data
+    return books
 
 
 def rebuild():
     env = Environment(loader=FileSystemLoader('.'), autoescape=select_autoescape(['html']))
     template = env.get_template('template.html')
     json_filename = os.path.join('data', 'data.json')
-    data = load_book_data(json_filename)
+    books = load_books(json_filename)
 
     pages_dir = 'pages'
     os.makedirs(pages_dir, exist_ok=True)
@@ -36,8 +36,8 @@ def rebuild():
         os.remove(file_)
 
     split_length = 10
-    chunked_data = more_itertools.chunked(data, split_length)
-    pages_count = math.ceil(len(data) / split_length)
+    chunked_data = more_itertools.chunked(books, split_length)
+    pages_count = math.ceil(len(books) / split_length)
 
     for num, page_data in enumerate(chunked_data, start=1):
         book_groups = more_itertools.chunked(page_data, math.ceil(len(page_data) / 2))
