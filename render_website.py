@@ -53,8 +53,6 @@ def rebuild():
                                         previous_url=previous_url
                                         )
 
-        if not is_page_num_correct(num, pages_count):
-            continue
         page_path = get_page_path(num, pages_dir)
         with open(page_path, 'w', encoding='utf8') as file:
             file.write(rendered_page)
