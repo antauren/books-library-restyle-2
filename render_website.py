@@ -43,8 +43,9 @@ def rebuild():
         book_groups = more_itertools.chunked(page_data, math.ceil(len(page_data) / 2))
         pages = [{'num': page_num, 'url': get_page_path(page_num, relative_dir)}
                  for page_num in range(1, pages_count + 1)]
-        next_url = get_page_path(num + 1, relative_dir) if is_page_num_correct(num + 1, pages_count) else ''
-        previous_url = get_page_path(num - 1, relative_dir) if is_page_num_correct(num - 1, pages_count) else ''
+
+        next_url = get_page_path(num + 1, relative_dir) if num + 1 <= pages_count else ''
+        previous_url = get_page_path(num - 1, relative_dir) if 0 < num - 1 else ''
 
         rendered_page = template.render(book_groups=book_groups,
                                         pages=pages,
