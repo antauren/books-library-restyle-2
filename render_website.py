@@ -9,8 +9,8 @@ from livereload import Server
 
 
 def get_page_path(num, pages_dir):
-    index_file = 'index{}.html'.format(num if num != 1 else '')
-    return os.path.join(pages_dir, index_file)
+    filename = 'index{}.html'.format(num if num != 1 else '')
+    return os.path.join(pages_dir, filename)
 
 
 def load_books(json_file):
