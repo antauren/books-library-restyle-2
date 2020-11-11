@@ -58,6 +58,11 @@ def rebuild():
         with open(page_path, 'w', encoding='utf8') as file:
             file.write(rendered_page)
 
+    if not books:
+        rendered_page = template.render()
+        with open(os.path.join(pages_dir, 'index.html'), 'w', encoding='utf8') as file:
+            file.write(rendered_page)
+
     print('Site rebuilded')
 
 
