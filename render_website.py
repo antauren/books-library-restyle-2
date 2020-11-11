@@ -61,10 +61,6 @@ def rebuild():
     print('Site rebuilded')
 
 
-def is_page_num_correct(num: int, pages_count: int) -> bool:
-    return 0 < num <= pages_count
-
-
 if __name__ == '__main__':
     rebuild()
     server = Server()
